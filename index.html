@@ -1,183 +1,365 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Inacio Eric Lelo Macosso</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
-    @media print { body { background: white; } }
-  </style>
-</head>
-<body class="p-6 sm:p-10">
-  <div class="max-w-5xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-3">
-
-    <!-- Colonne latérale -->
-    <aside class="bg-indigo-50 p-6 space-y-8 md:col-span-1">
-      <!-- Infos personnelles -->
-      <div>
-        <h1 class="text-2xl font-extrabold text-gray-900">Inacio Eric Lelo Macosso</h1>
-        <p class="text-indigo-600 font-semibold">Concepteur Développeur Java / Angular</p>
-        <div class="mt-3 text-sm text-gray-700 space-y-1">
-          <p><strong>📍</strong> Amiens, France</p>
-          <p><strong>📞</strong> 06 05 90 36 37</p>
-          <p><strong>✉️</strong> <a href="mailto:inacio.macosso@yahoo.com" class="text-indigo-600 hover:underline">inacio.macosso@yahoo.com</a></p>
-          <p><strong>🔗</strong> <a href="https://www.linkedin.com/in/inaciomacosso" target="_blank" class="text-indigo-600 hover:underline">linkedin.com/in/inaciomacosso</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Inacio Eric Lelo Macosso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f3f4f6;
+      }
+      @media print {
+        @page {
+          size: A3;
+          margin: 0mm !important;
+          padding: 0mm !important;
+        }
+        html, body {
+          background: white;
+          margin: 0mm !important;
+          padding: 0mm !important;
+          width: 100%;
+          height: 100%;
+        }
+        .max-w-5xl {
+          max-width: none !important;
+        }
+        .p-6, .p-8, .sm\:p-10 {
+          padding: 1rem !important;
+        }
+        .grid {
+          box-shadow: none !important;
+          margin: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
+        button,
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-6 sm:p-10 relative">
+    <!-- Bouton Exporter en PDF - Nouvelle position -->
+    <div class="fixed top-4 right-4 z-50 print:hidden">
+      <button
+        onclick="window.print()"
+        class="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg hover:from-indigo-700 hover:to-indigo-800 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-0.5"
+      >
+        <span class="text-xl">🖨️</span>
+        <span>Exporter en PDF</span>
+        <div class="absolute -bottom-8 right-0 bg-gray-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+          Format A3 sans marges
         </div>
-      </div>
+      </button>
+    </div>
 
-      <!-- Compétences techniques -->
-      <div>
-        <h2 class="text-lg font-bold text-gray-800 border-l-4 border-indigo-500 pl-2 uppercase mb-3">Compétences techniques</h2>
-        <div class="space-y-3 text-sm text-gray-700">
-          <div>
-            <p class="font-semibold text-indigo-700">Langages</p>
-            <p>Java, SQL, TypeScript</p>
-          </div>
-          <div>
-            <p class="font-semibold text-indigo-700">Frameworks</p>
-            <p>Spring Boot, Spring Batch, Angular, Hibernate, JPA</p>
-          </div>
-          <div>
-            <p class="font-semibold text-indigo-700">Bases de données</p>
-            <p>MySQL, Oracle, MariaDB</p>
-          </div>
-          <div>
-            <p class="font-semibold text-indigo-700">Outils & DevOps</p>
-            <p>Git, GitLab CI, SonarQube, Maven, Jenkins, Tomcat</p>
-          </div>
-          <div>
-            <p class="font-semibold text-indigo-700">Pratiques</p>
-            <p>API REST, Revue de code, Tests unitaires (JUnit, Jasmine)</p>
+    <div
+      class="max-w-5xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-3"
+    >
+      <!-- Colonne latérale -->
+      <aside class="bg-indigo-50 p-6 space-y-8 md:col-span-1">
+        <!-- Infos personnelles -->
+        <div>
+          <h1 class="text-2xl font-extrabold text-gray-900">
+            Inacio Eric Lelo Macosso
+          </h1>
+          <p class="text-indigo-600 font-semibold">
+            Concepteur Développeur Java / Angular
+          </p>
+          <div class="mt-3 text-sm text-gray-700 space-y-1">
+            <p><strong>📍</strong> Amiens, France</p>
+            <p><strong>📞</strong> 06 05 90 36 37</p>
+            <p>
+              <strong>✉️</strong>
+              <a
+                href="mailto:inacio.macosso@yahoo.com"
+                class="text-indigo-600 hover:underline"
+                >inacio.macosso@yahoo.com</a
+              >
+            </p>
+            <p>
+              <strong>🔗</strong>
+              <a
+                href="https://www.linkedin.com/in/inaciomacosso"
+                target="_blank"
+                class="text-indigo-600 hover:underline"
+                >linkedin.com/in/inaciomacosso</a
+              >
+            </p>
           </div>
         </div>
-      </div>
 
-      <!-- Soft skills -->
-      <div>
-        <h2 class="text-lg font-bold text-gray-800 border-l-4 border-indigo-500 pl-2 uppercase mb-3">Soft Skills</h2>
-        <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-          <li>Autonomie & Rigueur</li>
-          <li>Travail en équipe</li>
-          <li>Pédagogie & Transmission</li>
-          <li>Curiosité technique</li>
-          <li>Orientation qualité</li>
-        </ul>
-      </div>
-    </aside>
-
-    <!-- Colonne principale -->
-    <main class="p-8 md:col-span-2">
-      <!-- Profil professionnel -->
-      <section>
-        <h2 class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-3">Profil professionnel</h2>
-        <p class="text-gray-700 leading-relaxed">
-          Concepteur Développeur Java avec plus de trois ans d’expérience, spécialisé dans la conception, le développement et la maintenance d’applications web complexes. 
-          Chez <strong>OPEN</strong>, j’interviens sur des projets de TMA et de refonte applicative pour des clients institutionnels comme <strong>Inria</strong> et <strong>Campus France</strong>. 
-          Maîtrise des frameworks Java modernes (Spring Boot, Spring Batch, Hibernate) et d’Angular pour le front-end. 
-          Passionné par la qualité logicielle, je conçois des solutions performantes, maintenables et adaptées aux besoins métiers.
-        </p>
-      </section>
-
-      <!-- Expériences professionnelles -->
-      <section class="mt-8">
-        <h2 class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-4">Expériences professionnelles</h2>
-
-        <!-- OPEN -->
-        <div class="mb-6">
-          <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-indigo-700">Concepteur Développeur</h3>
-            <span class="text-sm text-gray-500">Janv. 2022 - Présent</span>
+        <!-- Compétences techniques -->
+        <div>
+          <h2
+            class="text-lg font-bold text-gray-800 border-l-4 border-indigo-500 pl-2 uppercase mb-3"
+          >
+            Compétences techniques
+          </h2>
+          <div class="space-y-3 text-sm text-gray-700">
+            <div>
+              <p class="font-semibold text-indigo-700">Langages</p>
+              <p>Java, SQL, TypeScript</p>
+            </div>
+            <div>
+              <p class="font-semibold text-indigo-700">Frameworks</p>
+              <p>Spring Boot, Spring Batch, Angular, Hibernate, JPA</p>
+            </div>
+            <div>
+              <p class="font-semibold text-indigo-700">Bases de données</p>
+              <p>MySQL, Oracle, MariaDB</p>
+            </div>
+            <div>
+              <p class="font-semibold text-indigo-700">Outils & DevOps</p>
+              <p>Git, GitLab CI, SonarQube, Maven, Jenkins, Tomcat</p>
+            </div>
+            <div>
+              <p class="font-semibold text-indigo-700">Pratiques</p>
+              <p>API REST, Revue de code, Tests unitaires (JUnit, Jasmine)</p>
+            </div>
           </div>
-          <p class="font-medium text-gray-800">OPEN | Lille, France</p>
+        </div>
 
-          <!-- Mission Inria -->
-          <div class="mt-2">
-            <h4 class="text-sm font-semibold text-indigo-600">Mission Inria</h4>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Maintenance et évolution d’applications Java (Spring, Hibernate, GWT, Tapestry).</li>
-              <li>Intégration de nouvelles fonctionnalités et optimisation des performances.</li>
-              <li>Utilisation d’Apache FOP/POI pour la génération de documents PDF/Word, déploiement sur Tomcat (MariaDB).</li>
+        <!-- Soft skills -->
+        <div>
+          <h2
+            class="text-lg font-bold text-gray-800 border-l-4 border-indigo-500 pl-2 uppercase mb-3"
+          >
+            Soft Skills
+          </h2>
+          <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+            <li>Autonomie & Rigueur</li>
+            <li>Travail en équipe</li>
+            <li>Pédagogie & Transmission</li>
+            <li>Curiosité technique</li>
+            <li>Orientation qualité</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Colonne principale -->
+      <main class="p-8 md:col-span-2">
+        <!-- Profil professionnel -->
+        <section>
+          <h2
+            class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-3"
+          >
+            Profil professionnel
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            Concepteur Développeur Java avec plus de trois ans d’expérience,
+            spécialisé dans la conception, le développement et la maintenance
+            d’applications web complexes. Chez <strong>OPEN</strong>,
+            j’interviens sur des projets de TMA et de refonte applicative pour
+            des clients institutionnels comme <strong>Inria</strong> et
+            <strong>Campus France</strong>. Maîtrise des frameworks Java
+            modernes (Spring Boot, Spring Batch, Hibernate) et d’Angular pour le
+            front-end. Passionné par la qualité logicielle, je conçois des
+            solutions performantes, maintenables et adaptées aux besoins
+            métiers.
+          </p>
+        </section>
+
+        <!-- Expériences professionnelles -->
+        <section class="mt-8">
+          <h2
+            class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-4"
+          >
+            Expériences professionnelles
+          </h2>
+
+          <!-- OPEN -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-indigo-700">
+                Concepteur Développeur
+              </h3>
+              <span class="text-sm text-gray-500">Janv. 2022 - Présent</span>
+            </div>
+            <p class="font-medium text-gray-800">OPEN | Lille, France</p>
+
+            <!-- Mission Inria -->
+            <div class="mt-2">
+              <h4 class="text-sm font-semibold text-indigo-600">
+                Mission Inria
+              </h4>
+              <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                <li>
+                  Maintenance et évolution d’applications Java (Spring,
+                  Hibernate, GWT, Tapestry).
+                </li>
+                <li>
+                  Intégration de nouvelles fonctionnalités et optimisation des
+                  performances.
+                </li>
+                <li>
+                  Utilisation d’Apache FOP/POI pour la génération de documents
+                  PDF/Word, déploiement sur Tomcat (MariaDB).
+                </li>
+              </ul>
+            </div>
+
+            <!-- Mission Campus France -->
+            <div class="mt-4">
+              <h4 class="text-sm font-semibold text-indigo-600">
+                Mission Campus France
+              </h4>
+              <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                <li>
+                  Participation à la maintenance applicative et évolutive de
+                  plus d'une dizaine d'applications et batchs.
+                </li>
+                <li>
+                  Intervention sur des applications majeures :
+                  <strong>Old Gestion</strong> (Java/Struts),
+                  <strong>Gestion</strong> (Java/Angular),
+                  <strong>Mon Espace Boursier</strong> (Java/Angular, GCP),
+                  <strong>Eclectus</strong> (Java/Angular, GCP),
+                  <strong>Calliope/Eiffel</strong> (Java/GWT).
+                </li>
+                <li>
+                  Conception, développement et maintenance de batchs critiques :
+                  <strong>IRIS</strong> (récupération de flux externes et
+                  création de dossiers), <strong>Batch RGPD</strong>,
+                  <strong>Batch de migration des données</strong>,
+                  <strong>Batch de nettoyage des documents</strong>,
+                  <strong>Batch Eiffel</strong>, etc.
+                </li>
+                <li>
+                  Refonte et modernisation d’applications internes avec Java 21
+                  / Spring Boot 3 / Angular.
+                </li>
+                <li>
+                  Optimisation des performances, automatisation de process et
+                  suivi qualité du code (GitLab CI, SonarQube, Jenkins).
+                </li>
+                <li>
+                  Collaboration étroite avec les équipes métiers et techniques.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Amazon -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-indigo-700">
+                Agent d'exploitation logistique
+              </h3>
+              <span class="text-sm text-gray-500">Août 2019 - Déc. 2019</span>
+            </div>
+            <p class="font-medium text-gray-800">
+              Amazon Logistics | Boves, France
+            </p>
+            <ul class="list-disc ml-5 text-sm text-gray-700 mt-2 space-y-1">
+              <li>
+                Contrôle, enregistrement informatique, mise en stock et
+                expédition des commandes.
+              </li>
             </ul>
           </div>
 
-          <!-- Mission Campus France -->
-          <div class="mt-4">
-            <h4 class="text-sm font-semibold text-indigo-600">Mission Campus France</h4>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Participation à la maintenance applicative et évolutive de plus d'une dizaine d'applications et batchs.</li>
-              <li>Intervention sur des applications majeures : <strong>Old Gestion</strong> (Java/Struts), <strong>Gestion</strong> (Java/Angular), <strong>Mon Espace Boursier</strong> (Java/Angular, GCP), <strong>Eclectus</strong> (Java/Angular, GCP), <strong>Calliope/Eiffel</strong> (Java/GWT).</li>
-              <li>Conception, développement et maintenance de batchs critiques : <strong>IRIS</strong> (récupération de flux externes et création de dossiers), <strong>Batch RGPD</strong>, <strong>Batch de migration des données</strong>, <strong>Batch de nettoyage des documents</strong>, <strong>Batch Eiffel</strong>, etc.</li>
-              <li>Refonte et modernisation d’applications internes avec Java 21 / Spring Boot 3 / Angular.</li>
-              <li>Optimisation des performances, automatisation de process et suivi qualité du code (GitLab CI, SonarQube, Jenkins).</li>
-              <li>Collaboration étroite avec les équipes métiers et techniques.</li>
+          <!-- Ministère de l'Éducation - Angola -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-indigo-700">
+                Professeur des écoles
+              </h3>
+              <span class="text-sm text-gray-500">Déc. 2012 - Août 2017</span>
+            </div>
+            <p class="font-medium text-gray-800">
+              Ministère de l'Éducation | Cabinda, Angola
+            </p>
+            <ul class="list-disc ml-5 text-sm text-gray-700 mt-2 space-y-1">
+              <li>
+                Enseignement des savoirs fondamentaux : lecture, écriture en
+                portugais, mathématiques, histoire et géographie.
+              </li>
+              <li>
+                Encadrement pédagogique et accompagnement individualisé des
+                élèves.
+              </li>
+              <li>
+                Développement de méthodes d'apprentissage favorisant l’autonomie
+                et la progression continue.
+              </li>
             </ul>
           </div>
-        </div>
 
-        <!-- Amazon -->
-        <div class="mb-6">
-          <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-indigo-700">Agent d'exploitation logistique</h3>
-            <span class="text-sm text-gray-500">Août 2019 - Déc. 2019</span>
+          <div class="mb-6">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-indigo-700">
+                Professeur de mathématiques au collège
+              </h3>
+              <span class="text-sm text-gray-500">Janv. 2011 - Déc. 2012</span>
+            </div>
+            <p class="font-medium text-gray-800">
+              Ministère de l'Éducation | Cabinda, Angola
+            </p>
+            <ul class="list-disc ml-5 text-sm text-gray-700 mt-2 space-y-1">
+              <li>
+                Enseignement des mathématiques au collège et suivi des progrès
+                des élèves.
+              </li>
+              <li>
+                Création de supports pédagogiques et participation aux réunions
+                d’équipe éducative.
+              </li>
+              <li>
+                Accompagnement des élèves pour renforcer leurs compétences
+                logiques et analytiques.
+              </li>
+            </ul>
           </div>
-          <p class="font-medium text-gray-800">Amazon Logistics | Boves, France</p>
-          <ul class="list-disc ml-5 text-sm text-gray-700 mt-2 space-y-1">
-            <li>Contrôle, enregistrement informatique, mise en stock et expédition des commandes.</li>
+        </section>
+
+        <!-- Formation -->
+        <section class="mt-8">
+          <h2
+            class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-4"
+          >
+            Formation
+          </h2>
+          <ul class="list-none text-sm text-gray-700 space-y-2">
+            <li>
+              <strong>AFPA Amiens</strong> — Diplôme niveau 6 (Bac+3/4),
+              Concepteur Développeur d’Applications (2020 - 2021). Apprentissage
+              de Java, Spring, Angular, SQL.
+            </li>
+            <li>
+              <strong>AFPA Amiens</strong> — Techniques de base du développement
+              (2020).
+            </li>
+            <li>
+              <strong>Université 11 de Novembro</strong> — Licence en
+              Administration et Gestion des Entreprises (2012 - 2016).
+            </li>
           </ul>
-        </div>
+        </section>
 
-        <!-- Ministère de l'Éducation - Angola -->
-        <div class="mb-6">
-          <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-indigo-700">Professeur des écoles</h3>
-            <span class="text-sm text-gray-500">Déc. 2012 - Août 2017</span>
-          </div>
-          <p class="font-medium text-gray-800">Ministère de l'Éducation | Cabinda, Angola</p>
-          <ul class="list-disc ml-5 text-sm text-gray-700 mt-2 space-y-1">
-            <li>Enseignement des savoirs fondamentaux : lecture, écriture en portugais, mathématiques, histoire et géographie.</li>
-            <li>Encadrement pédagogique et accompagnement individualisé des élèves.</li>
-            <li>Développement de méthodes d'apprentissage favorisant l’autonomie et la progression continue.</li>
+        <!-- Langues -->
+        <section class="mt-8">
+          <h2
+            class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-4"
+          >
+            Langues
+          </h2>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li><strong>Français :</strong> Natif / Bilingue</li>
+            <li><strong>Portugais :</strong> Natif / Bilingue</li>
+            <li><strong>Espagnol :</strong> Professionnel</li>
+            <li><strong>Anglais :</strong> Notions professionnelles</li>
           </ul>
-        </div>
-
-        <div class="mb-6">
-          <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-indigo-700">Professeur de mathématiques au collège</h3>
-            <span class="text-sm text-gray-500">Janv. 2011 - Déc. 2012</span>
-          </div>
-          <p class="font-medium text-gray-800">Ministère de l'Éducation | Cabinda, Angola</p>
-          <ul class="list-disc ml-5 text-sm text-gray-700 mt-2 space-y-1">
-            <li>Enseignement des mathématiques au collège et suivi des progrès des élèves.</li>
-            <li>Création de supports pédagogiques et participation aux réunions d’équipe éducative.</li>
-            <li>Accompagnement des élèves pour renforcer leurs compétences logiques et analytiques.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Formation -->
-      <section class="mt-8">
-        <h2 class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-4">Formation</h2>
-        <ul class="list-none text-sm text-gray-700 space-y-2">
-          <li><strong>AFPA Amiens</strong> — Diplôme niveau 6 (Bac+3/4), Concepteur Développeur d’Applications (2020 - 2021). Apprentissage de Java, Spring, Angular, SQL.</li>
-          <li><strong>AFPA Amiens</strong> — Techniques de base du développement (2020).</li>
-          <li><strong>Université 11 de Novembro</strong> — Licence en Administration et Gestion des Entreprises (2012 - 2016).</li>
-        </ul>
-      </section>
-
-      <!-- Langues -->
-      <section class="mt-8">
-        <h2 class="border-l-4 border-indigo-500 pl-2 text-xl font-bold text-gray-800 uppercase mb-4">Langues</h2>
-        <ul class="text-sm text-gray-700 space-y-1">
-          <li><strong>Français :</strong> Natif / Bilingue</li>
-          <li><strong>Portugais :</strong> Natif / Bilingue</li>
-          <li><strong>Espagnol :</strong> Professionnel</li>
-          <li><strong>Anglais :</strong> Notions professionnelles</li>
-        </ul>
-      </section>
-    </main>
-  </div>
-</body>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
