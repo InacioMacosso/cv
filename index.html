@@ -9,48 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #f3f4f6;
-      }
-      @media print {
-        @page {
-          size: A3;
-          margin: 0mm !important;
-          padding: 0mm !important;
-        }
-        html, body {
-          background: white;
-          margin: 0mm !important;
-          padding: 0mm !important;
-          width: 100%;
-          height: 100%;
-        }
-        .max-w-5xl {
-          max-width: none !important;
-        }
-        .p-6, .p-8, .sm\:p-10 {
-          padding: 1rem !important;
-        }
-        .grid {
-          box-shadow: none !important;
-          margin: 0 !important;
-          width: 100% !important;
-          height: 100% !important;
-        }
-        button,
-        .no-print {
-          display: none !important;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="p-6 sm:p-10 relative">
     <!-- Bouton Exporter en PDF - Nouvelle position -->
     <div class="fixed top-4 right-4 z-50 print:hidden">
       <button
-        onclick="window.print()"
+        id="print-pdf-btn"
         class="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white text-sm font-medium rounded-lg shadow-lg hover:from-indigo-700 hover:to-indigo-800 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-0.5"
       >
         <span class="text-xl">🖨️</span>
@@ -355,11 +320,11 @@
           <ul class="text-sm text-gray-700 space-y-1">
             <li><strong>Français :</strong> Natif / Bilingue</li>
             <li><strong>Portugais :</strong> Natif / Bilingue</li>
-            <li><strong>Espagnol :</strong> Professionnel</li>
             <li><strong>Anglais :</strong> Notions professionnelles</li>
           </ul>
         </section>
       </main>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

@@ -1,0 +1,34 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
+}
+@media print {
+  @page {
+    size: A3;
+    margin: 0mm !important;
+    padding: 0mm !important;
+  }
+  html, body {
+    background: white;
+    margin: 0mm !important;
+    padding: 0mm !important;
+    width: 100%;
+    height: 100%;
+  }
+  .max-w-5xl {
+    max-width: none !important;
+  }
+  .p-6, .p-8, .sm\:p-10 {
+    padding: 1rem !important;
+  }
+  .grid {
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  button,
+  .no-print {
+    display: none !important;
+  }
+}
